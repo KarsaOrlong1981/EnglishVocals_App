@@ -1,0 +1,59 @@
+Allgemein;General
+Ja;yes
+Nein;no
+Vielleicht;maybe
+Bitte;please
+Danke;thank you
+Entschuldigung;sorry
+Alles klar;alright
+Ich verstehe nicht;I do not understand
+Sprechen Sie Deutsch;Do you speak German
+Ich spreche kein Englisch;I don’t speak English
+Hilfe;Help
+Ein bisschen langsamer bitte;A little slower please
+Gesundheit;Bless you
+Prost;Cheers
+Wo;where
+Wann;when
+Wer;who
+Warum;why
+Vorstellungen;Introductions
+Name;name
+Wie heißen Sie;What is your name
+Ich heiße;My name is
+Ich bin;I am
+Es ist nett Sie kennenzulernen;It is nice to meet you
+Ich bin 7 Jahre alt;I am 7 years old
+Ich komme aus;I am from
+Wie alt sind Sie?;How old are you?;
+Wo arbeiten Sie?;Where do you work?
+Wo kommen Sie her?;Where are you from?
+Was bringt Sie hierher?;What brings you here?
+Wie war Ihre Reise?;How was your trip?
+Haben Sie eine gute Zeit?;Are you having a good time?
+Was halten Sie von ?;What do you think about?
+Meine Freunde nennen mich;My friends call me …
+Kennen wir uns?;Have we met before?
+Dies ist Marvin;This is Marvin
+Wie war Ihr Wochenende?;How was your weekend?
+Begrüssung / Verabschiedung;Greeting / Farewell
+Hallo;Hello
+Guten Morgen;Good morning
+Guten Tag;Good afternoon
+Guten Abend;Good evening
+Gute Nacht;Good night
+Tschüss;Goodbye
+Auf Wiedersehen;See you
+Wie geht es Ihnen?;How are you?
+gut;well / good
+schlecht;bad
+Hey / Hallo;Hey/Hi
+Wie geht’s?;How’s it going? / How do you do?
+Was geht?;What’s up?
+Schön Sie zu sehen;Good to see you
+Nett Sie kennenzulernen;Nice to meet you.
+Mach’s gut;Take care.
+Lange nicht gesehen;Long time no see, Haven’t seen you in a while
+Wie steht’s?;How are things going?
+Reise;Travel
+Ich möchte gerne;I would like
