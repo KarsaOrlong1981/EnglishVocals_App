@@ -18,7 +18,7 @@ namespace EnglishVocals_App.Models
 
             var settings = new SpeechOptions()
             {
-                Volume = .90f,
+                Volume = .85f,
                 Pitch = 1.0f,
                 Locale = locale
             };
@@ -29,7 +29,7 @@ namespace EnglishVocals_App.Models
         {
             var settings = new SpeechOptions()
             {
-                Volume = .90f,
+                Volume = .85f,
                 Pitch = 1.0f
             };
             await TextToSpeech.SpeakAsync(text, settings);

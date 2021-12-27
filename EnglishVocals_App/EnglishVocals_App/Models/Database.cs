@@ -15,11 +15,11 @@ namespace EnglishVocals_App.Models
             _database = new SQLiteAsyncConnection(dbPath);
             _database.CreateTableAsync<Words>().Wait();
         }
-        public Task<List<Words>> GetAcalStatusAsync()
+        public Task<List<Words>> GetAllItemsAsync()
         {
             return _database.Table<Words>().ToListAsync();
         }
-        public Task<int> SaveAcalStatusAsync(Words words)
+        public Task<int> AddToDBAsync(Words words)
         {
             return _database.InsertAsync(words);
         }
@@ -31,11 +31,15 @@ namespace EnglishVocals_App.Models
                 await _database.DeleteAsync(item);
             }
         }
+        public Task<Words> GetItemAsync(int id)
+        {
+            return _database.Table<Words>().Where(i => i.Id == id).FirstOrDefaultAsync();
+        }
         public Task<int> DeleteAllItems<T>()
         {
             return _database.DeleteAllAsync<Words>();
         }
-        public Task<int> GetLayoutCount()
+        public Task<int> GetDBCount()
         {
             return _database.Table<Words>().CountAsync();
         }

@@ -31,7 +31,7 @@
                 IsVisible="{Binding IsVisBtn}"
                 Command="{Binding BTN_LearnEnglish}"/>
         <Button Grid.Row="1" 
-                x:Name="btn_falseVocals" 
+               
                 ContentLayout="top,0"
                 FontSize="25"
                 Text="Richtige Vokabeln" 
@@ -45,9 +45,11 @@
                 Margin="20"
                 ImageSource="haken"
                 IsVisible="{Binding IsVisBtn}"
+                Command="{Binding BTN_TrueAnswers}"
+               
                 />
         <Button Grid.Row="2" 
-                x:Name="btn_trueVocals" 
+               
                 ContentLayout="top,0"
                 FontSize="25"
                 Text="Falsche Vokabeln" 
@@ -61,6 +63,7 @@
                 Margin="20"
                 ImageSource="cross"
                 IsVisible="{Binding IsVisBtn}"
+                 Command="{Binding BTN_FalseAnswers}"
                 />
     </Grid>
     

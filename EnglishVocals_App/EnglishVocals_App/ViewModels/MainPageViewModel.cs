@@ -15,12 +15,24 @@ namespace EnglishVocals_App.ViewModels
     {
         public INavigation Navigation { get; set; }
         public ICommand BTN_LearnEnglish { get; set; }
+        public ICommand BTN_TrueAnswers { get; set; }
+        public ICommand BTN_FalseAnswers { get; set; }
         private MainPage mainpage;
         private SpeakText speak;
         private Button bt_Eng_Ger, bt_Ger_Eng, bt_BackToMain;
         private bool isVisGrid, isVisBtn;
         
         private Grid grid;
+        public bool IsVisGrid
+        {
+            get => isVisGrid;
+            set => SetProperty(ref isVisGrid, value);
+        }
+        public bool IsVisBtn
+        {
+            get => isVisBtn;
+            set => SetProperty(ref isVisBtn, value);
+        }
         public MainPageViewModel(INavigation navigation, Grid grid, MainPage mainPage)
         {
             this.Navigation = navigation;
@@ -32,7 +44,17 @@ namespace EnglishVocals_App.ViewModels
             IsVisGrid = true;
             IsVisBtn = true;
             BTN_LearnEnglish = new Command(() => SelectionMenue());
-            //async () => await Navigation.PushAsync(new VocalsView())
+            BTN_FalseAnswers = new Command(LoadFalseAnswersPage);
+            BTN_TrueAnswers = new Command(LoadTrueAnswersPage);
+            
+        }
+        private void LoadTrueAnswersPage()
+        {
+            CallTrueAnswerspage();
+        }
+        private void LoadFalseAnswersPage()
+        {
+            CallFalseAnswersPage();
         }
         private void SelectionMenue()
         {
@@ -116,15 +138,15 @@ namespace EnglishVocals_App.ViewModels
             CallVocalsView(2);
         }
 
-        public bool IsVisGrid
+        private async void CallTrueAnswerspage()
         {
-            get => isVisGrid; 
-            set => SetProperty(ref isVisGrid, value); 
+            TrueAnswersPage trueAnswersPage = new TrueAnswersPage();
+            await Navigation .PushAsync(trueAnswersPage);
         }
-        public bool IsVisBtn
+        private async void CallFalseAnswersPage()
         {
-            get => isVisBtn;
-            set => SetProperty(ref isVisBtn, value);
+            FalseAnswersPage falseAnswersPage = new FalseAnswersPage();
+            await Navigation.PushAsync(falseAnswersPage);
         }
         private async void CallVocalsView(int switchGerEng)
         {

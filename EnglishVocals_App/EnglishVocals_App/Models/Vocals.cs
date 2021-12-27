@@ -13,24 +13,49 @@ namespace EnglishVocals_App.Models
         List<string> list;
         List<string> listGerman;
         List<string> listEnglish;
+        List<string> listTrueDB;
+        List<string> listFalseDB;
         Random random;
         Button bt_German,bt_English;
         Grid grid;
         Button btn_ShowAnswer;
         SpeakText speak;
+        string txtEnglish, txtGerman;
+        bool dbTrue, dbFalse;
         int switchGerEng;
         public Vocals()
         {
             list = new List<string>();
+            listFalseDB = new List<string>();
+            listTrueDB = new List<string>();
             speak = new SpeakText();
             random = new Random();
-            switchGerEng = 0;
+            dbFalse = false;
+            dbTrue = false;
             ReadAsset();
         }
         //Die Methoden
-        //Über eine Instanz dieser Klasse kann nur die methode GetRandomVocal aufgerufen werden
+        public  void GetDBTrueVocals(Grid grid, int switchGerEng)
+        {
+            dbTrue = true;
+            dbFalse = false;
+            if (App.DatabaseTrue.GetAllItemsAsync().Result.Count > 0)
+            {
+                this.grid = grid;
+                this.switchGerEng = switchGerEng;
+                int dbCount = App.DatabaseTrue.GetAllItemsAsync().Result.Count;
+                int randomValue = random.Next(1, dbCount + 1);
+                string germanVocal =  App.DatabaseTrue.GetItemAsync(randomValue).Result.GermanWords;
+                string englishVocal = App.DatabaseTrue.GetItemAsync(randomValue).Result.EnglishWords;
+                SetButtonsToGrid(germanVocal, englishVocal);   
+               
+            }
+           
+        }
         public void GetRandomVocal(Grid grid, int switchGerEng)
         {
+            dbTrue = false;
+            dbFalse = false;
             this.grid = grid;
             this.switchGerEng = switchGerEng;
             listGerman = GetGermanVocals();
@@ -38,10 +63,16 @@ namespace EnglishVocals_App.Models
             int randomValue = random.Next(0, listGerman.Count);
             string vocalGerman = listGerman[randomValue];
             string vocalEnglish = listEnglish[randomValue];
-
+            SetButtonsToGrid(vocalGerman , vocalEnglish);
+          
+        }
+        private void SetButtonsToGrid(string vocalGerman, string vocalEnglish)
+        {
+            txtEnglish = vocalEnglish;
+            txtGerman = vocalGerman;
             Button bt_German = new Button
             {
-                Text = vocalGerman,
+                Text = txtGerman,
                 ImageSource = "speaker24",
                 BackgroundColor = Color.FromHex("#292929"),
                 ContentLayout = new Button.ButtonContentLayout(Button.ButtonContentLayout.ImagePosition.Top, 0),
@@ -55,7 +86,7 @@ namespace EnglishVocals_App.Models
             bt_German.Clicked += Bt_German_Clicked;
             Button bt_English = new Button
             {
-                Text = vocalEnglish,
+                Text = txtEnglish,
                 ImageSource = "speaker24",
                 BackgroundColor = Color.FromHex("#292929"),
                 ContentLayout = new Button.ButtonContentLayout(Button.ButtonContentLayout.ImagePosition.Top, 0),
@@ -85,18 +116,18 @@ namespace EnglishVocals_App.Models
             };
             this.btn_ShowAnswer = btn_ShowAnswer;
             btn_ShowAnswer.Clicked += Btn_ShowAnswer_Clicked;
-
             switch (switchGerEng)
             {
                 case 1:
-                    SpeakGerman(vocalGerman);
+                    // SpeakGerman(txtGerman);
                     Grid.SetRow(bt_German, 1);
                     grid.Children.Add(bt_German); break;
                 case 2:
-                    SpeakEnglish(vocalEnglish);
+                    // SpeakEnglish(txtEnglish);
                     Grid.SetRow(bt_English, 1);
                     grid.Children.Add(bt_English); break;
             }
+
             Grid.SetRow(btn_ShowAnswer, 3);
             grid.Children.Add(btn_ShowAnswer);
         }
@@ -143,6 +174,7 @@ namespace EnglishVocals_App.Models
             }
             return extractWords;
         }
+
         //Die deutschen Wörter aus der Liste lesen
         private List<string> GetGermanVocals()
         {
@@ -209,12 +241,12 @@ namespace EnglishVocals_App.Models
         //Die Click events
         private void Bt_English_Clicked(object sender, EventArgs e)
         {
-           SpeakEnglish(bt_English.Text);
+           SpeakEnglish(txtEnglish);
         }
 
         private void Bt_German_Clicked(object sender, EventArgs e)
         {
-           SpeakGerman(bt_German.Text);
+           SpeakGerman(txtGerman);
         }
 
         private void Btn_ShowAnswer_Clicked(object sender, EventArgs e)
@@ -223,14 +255,14 @@ namespace EnglishVocals_App.Models
             switch (switchGerEng)
             {
                 case 1: 
-                   SpeakEnglish(bt_English.Text);
+                  // SpeakEnglish(bt_English.Text);
                    
                     Grid.SetRow(bt_English, 2);
                     grid.Children.Add(bt_English);
                     
                     break;
                     case 2:
-                    SpeakGerman(bt_German.Text);
+                   // SpeakGerman(bt_German.Text);
                    
                     Grid.SetRow(bt_German, 2);
                     grid.Children.Add(bt_German);
@@ -244,17 +276,89 @@ namespace EnglishVocals_App.Models
 
         private void ImgBT_False_Clicked(object sender, EventArgs e)
         {
-            //Datenbank zuweisen
+            AddToFalseDB(txtGerman, txtEnglish);
             grid.Children.Clear();
-            GetRandomVocal(grid, switchGerEng);
+            GetVocalsFromListOrDB();
+            
         }
 
         private void ImgBT_Rigth_Clicked(object sender, EventArgs e)
         {
+            AddToTrueDB(txtGerman, txtEnglish);
             grid.Children.Clear();
-            GetRandomVocal(grid, switchGerEng);
+            GetVocalsFromListOrDB();
         }
-       
+        private void GetVocalsFromListOrDB()
+        {
+            if (dbFalse == false && dbTrue == false)
+            {
+                GetRandomVocal(grid, switchGerEng);
+            }
+            else
+            {
+                if (dbTrue == true)
+                {
+                    GetDBTrueVocals(grid, switchGerEng);
+                }
+                if (dbFalse == true)
+                {
 
+                }
+            }
+        }
+        //App.Database1.GetQRcodeAsync().Result.Count == 0
+        private async void AddToTrueDB(string txtGer, string txtEng)
+        {
+            if (!string.IsNullOrWhiteSpace(txtGer) && !string.IsNullOrWhiteSpace(txtEng))
+            {
+                bool hit = false;
+                for (int i = 1; i <= App.DatabaseTrue.GetDBCount().Result; i++)
+                {
+                   if (App.DatabaseTrue.GetItemAsync(i).Result.EnglishWords == txtEng)
+                   {
+                      hit = true;
+                      break;
+                   }
+                   
+                }
+                if (!hit)
+                {
+                    await App.DatabaseTrue.AddToDBAsync(new Models.Words
+                    {
+                        GermanWords = txtGer,
+                        EnglishWords = txtEng
+
+                    });
+                }
+              
+            }
+        }
+        private async void AddToFalseDB(string txtGer, string txtEng)
+        {
+            if (!string.IsNullOrWhiteSpace(txtGer) && !string.IsNullOrWhiteSpace(txtEng))
+            {
+
+                bool hit = false;
+                for (int i = 1; i <= App.DatabaseFalse.GetDBCount().Result; i++)
+                {
+                    if (App.DatabaseTrue.GetItemAsync(i).Result.EnglishWords == txtEng)
+                    {
+                        hit = true;
+                        break;
+                    }
+
+                }
+                if (!hit)
+                {
+                    await App.DatabaseFalse.AddToDBAsync(new Models.Words
+                    {
+                        GermanWords = txtGer,
+                        EnglishWords = txtEng
+
+                    });
+                }
+
+            }
+        }
     }
 }

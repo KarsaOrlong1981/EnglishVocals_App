@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage BackgroundColor="#292929" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodels="clr-namespace:EnglishVocals_App.ViewModels" x:DataType="viewmodels:TrueAnswersViewModel"
+             x:Class="EnglishVocals_App.TrueAnswersPage"
+             Title="Richtig Beantwortet"
+             >
+    <Grid x:Name="grid" >
+        <Grid.RowDefinitions >
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Button Grid.Row="1" 
+                
+                ContentLayout="top,0"
+                FontSize="25"
+                Text="Deutsch - Englisch" 
+                TextColor="White"
+                HorizontalOptions="FillAndExpand" 
+                VerticalOptions="FillAndExpand"
+                BackgroundColor="Black" 
+                BorderColor="SteelBlue"
+                BorderWidth="5"
+                CornerRadius="20"
+                Margin="20"
+                ImageSource="deutschland"
+                IsVisible="{Binding IsVisBtn}"
+                Command="{Binding BTN_GermanEnglish}"
+                />
+        <Button Grid.Row="2" 
+               
+                ContentLayout="top,0"
+                FontSize="25"
+                Text="Englisch - Deutsch" 
+                TextColor="White"
+                HorizontalOptions="FillAndExpand" 
+                VerticalOptions="FillAndExpand"
+                BackgroundColor="Black" 
+                BorderColor="SteelBlue"
+                BorderWidth="5"
+                CornerRadius="20"
+                Margin="20"
+                ImageSource="england"
+                IsVisible="{Binding IsVisBtn}"
+                Command="{Binding BTN_EnglishGerman}"
+                />
+    </Grid>
+</ContentPage>

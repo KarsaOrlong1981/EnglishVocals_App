@@ -57,3 +57,4 @@ Lange nicht gesehen;Long time no see, Haven’t seen you in a while
 Wie steht’s?;How are things going?
 Reise;Travel
 Ich möchte gerne;I would like
+Tisch;table

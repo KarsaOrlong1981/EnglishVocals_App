@@ -10,13 +10,24 @@ namespace EnglishVocals_App
     {
         static Database db;
         public static NavigationPage NavPage { get; set; }
-        public static Database Database
+        public static Database DatabaseTrue
         {
             get
             {
                 if (db == null)
                 {
-                    db = new Database(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Worte.db1"));
+                    db = new Database(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "TrueAnswer.db3"));
+                }
+                return db;
+            }
+        }
+        public static Database DatabaseFalse
+        {
+            get
+            {
+                if (db == null)
+                {
+                    db = new Database(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "FalseAnswer.db3"));
                 }
                 return db;
             }
