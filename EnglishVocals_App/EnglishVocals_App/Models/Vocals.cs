@@ -49,8 +49,10 @@ namespace EnglishVocals_App.Models
                 string englishVocal = App.DatabaseTrue.GetAllItemsAsync().Result[randomValue].EnglishWords;
                 
                 SetButtonsToGrid(germanVocal, englishVocal);
-                
-
+            }
+            else
+            {
+                LabelToCall();
             }
            
         }
@@ -66,10 +68,11 @@ namespace EnglishVocals_App.Models
                 int randomValue = random.Next(0, dbCount);
                 string germanVocal = App.DatabaseFalse.GetAllItemsAsync().Result[randomValue].GermanWords;
                 string englishVocal = App.DatabaseFalse.GetAllItemsAsync().Result[randomValue].EnglishWords;
-               
-                
                 SetButtonsToGrid(germanVocal, englishVocal);
-                
+            }
+            else
+            {
+                LabelToCall();
             }
 
         }
