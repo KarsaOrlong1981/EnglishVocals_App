@@ -140,13 +140,27 @@ namespace EnglishVocals_App.ViewModels
 
         private async void CallTrueAnswerspage()
         {
-            TrueAnswersPage trueAnswersPage = new TrueAnswersPage();
-            await Navigation .PushAsync(trueAnswersPage);
+            if (App.DatabaseTrue.GetAllItemsAsync().Result.Count > 0)
+            {
+                TrueAnswersPage trueAnswersPage = new TrueAnswersPage();
+                await Navigation.PushAsync(trueAnswersPage);
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("Sorry", "Diese Datenbank ist Leer", "Ok");
+            }
         }
         private async void CallFalseAnswersPage()
         {
-            FalseAnswersPage falseAnswersPage = new FalseAnswersPage();
-            await Navigation.PushAsync(falseAnswersPage);
+            if (App.DatabaseFalse.GetAllItemsAsync().Result.Count > 0)
+            {
+                FalseAnswersPage falseAnswersPage = new FalseAnswersPage();
+                await Navigation.PushAsync(falseAnswersPage);
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("Sorry", "Diese Datenbank ist Leer", "Ok");
+            }
         }
         private async void CallVocalsView(int switchGerEng)
         {

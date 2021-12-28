@@ -8,28 +8,29 @@ namespace EnglishVocals_App
 {
     public partial class App : Application
     {
-        static Database db;
+        static Database dbTrue;
+        static Database dbFalse;
         public static NavigationPage NavPage { get; set; }
         public static Database DatabaseTrue
         {
             get
             {
-                if (db == null)
+                if (dbTrue == null)
                 {
-                    db = new Database(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "TrueAnswer.db3"));
+                    dbTrue = new Database(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "TrueAnswers.db6"));
                 }
-                return db;
+                return dbTrue;
             }
         }
         public static Database DatabaseFalse
         {
             get
             {
-                if (db == null)
+                if (dbFalse == null)
                 {
-                    db = new Database(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "FalseAnswer.db3"));
+                    dbFalse = new Database(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "FalseAnswers.db6"));
                 }
-                return db;
+                return dbFalse;
             }
         }
         public App()

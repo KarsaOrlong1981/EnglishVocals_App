@@ -1,6 +1,7 @@
 ﻿using Android.Content.Res;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Text;
 using Xamarin.Forms;
@@ -13,8 +14,7 @@ namespace EnglishVocals_App.Models
         List<string> list;
         List<string> listGerman;
         List<string> listEnglish;
-        List<string> listTrueDB;
-        List<string> listFalseDB;
+        List<Words> listShowTrueDB, listShowFalseDB;
         Random random;
         Button bt_German,bt_English;
         Grid grid;
@@ -26,8 +26,8 @@ namespace EnglishVocals_App.Models
         public Vocals()
         {
             list = new List<string>();
-            listFalseDB = new List<string>();
-            listTrueDB = new List<string>();
+            listShowTrueDB = new List<Words>();
+            listShowFalseDB = new List<Words>();
             speak = new SpeakText();
             random = new Random();
             dbFalse = false;
@@ -44,13 +44,34 @@ namespace EnglishVocals_App.Models
                 this.grid = grid;
                 this.switchGerEng = switchGerEng;
                 int dbCount = App.DatabaseTrue.GetAllItemsAsync().Result.Count;
-                int randomValue = random.Next(1, dbCount + 1);
-                string germanVocal =  App.DatabaseTrue.GetItemAsync(randomValue).Result.GermanWords;
-                string englishVocal = App.DatabaseTrue.GetItemAsync(randomValue).Result.EnglishWords;
-                SetButtonsToGrid(germanVocal, englishVocal);   
-               
+                int randomValue = random.Next(0, dbCount);
+                string germanVocal =  App.DatabaseTrue.GetAllItemsAsync().Result[randomValue].GermanWords;
+                string englishVocal = App.DatabaseTrue.GetAllItemsAsync().Result[randomValue].EnglishWords;
+                
+                SetButtonsToGrid(germanVocal, englishVocal);
+                
+
             }
            
+        }
+        public  void GetDBFalseVocals(Grid grid, int switchGerEng)
+        {
+            dbTrue = false;
+            dbFalse = true;
+            if (App.DatabaseFalse.GetAllItemsAsync().Result.Count > 0)
+            {
+                this.grid = grid;
+                this.switchGerEng = switchGerEng;
+                int dbCount = App.DatabaseFalse.GetAllItemsAsync().Result.Count;
+                int randomValue = random.Next(0, dbCount);
+                string germanVocal = App.DatabaseFalse.GetAllItemsAsync().Result[randomValue].GermanWords;
+                string englishVocal = App.DatabaseFalse.GetAllItemsAsync().Result[randomValue].EnglishWords;
+               
+                
+                SetButtonsToGrid(germanVocal, englishVocal);
+                
+            }
+
         }
         public void GetRandomVocal(Grid grid, int switchGerEng)
         {
@@ -213,7 +234,7 @@ namespace EnglishVocals_App.Models
                 VerticalOptions = LayoutOptions.FillAndExpand,
                 Margin = new Thickness(20),
             };
-            imgBT_Rigth.Clicked += ImgBT_Rigth_Clicked;
+            imgBT_Rigth.Clicked += ImgBT_True_Clicked;
             ImageButton imgBT_False = new ImageButton
             {
                 Source = "cross.png",
@@ -278,15 +299,31 @@ namespace EnglishVocals_App.Models
         {
             AddToFalseDB(txtGerman, txtEnglish);
             grid.Children.Clear();
+            IsInTrueDB(txtGerman, txtEnglish);
             GetVocalsFromListOrDB();
-            
         }
 
-        private void ImgBT_Rigth_Clicked(object sender, EventArgs e)
+        private void ImgBT_True_Clicked(object sender, EventArgs e)
         {
             AddToTrueDB(txtGerman, txtEnglish);
             grid.Children.Clear();
+            IsInFalseDB(txtGerman, txtEnglish);
             GetVocalsFromListOrDB();
+        }
+        private void LabelToCall()
+        {
+            Label lbl = new Label
+            {
+                Text = "Diese Datenbank ist nun leer.",
+                FontSize = 20,
+                TextColor = Color.White,
+                HorizontalOptions = LayoutOptions.FillAndExpand,
+                VerticalOptions = LayoutOptions.FillAndExpand,
+                Margin = new Thickness(20)
+
+            };
+            Grid.SetRow(lbl, 2);
+            grid.Children.Add(lbl);
         }
         private void GetVocalsFromListOrDB()
         {
@@ -302,7 +339,7 @@ namespace EnglishVocals_App.Models
                 }
                 if (dbFalse == true)
                 {
-
+                    GetDBFalseVocals(grid, switchGerEng);
                 }
             }
         }
@@ -311,12 +348,15 @@ namespace EnglishVocals_App.Models
         {
             if (!string.IsNullOrWhiteSpace(txtGer) && !string.IsNullOrWhiteSpace(txtEng))
             {
+                
                 bool hit = false;
-                for (int i = 1; i <= App.DatabaseTrue.GetDBCount().Result; i++)
+                
+                for (int i = 0; i < App.DatabaseTrue.GetDBCount().Result; i++)
                 {
-                   if (App.DatabaseTrue.GetItemAsync(i).Result.EnglishWords == txtEng)
+                   if (App.DatabaseTrue.GetAllItemsAsync().Result[i].EnglishWords == txtEng)
                    {
                       hit = true;
+                      
                       break;
                    }
                    
@@ -325,23 +365,52 @@ namespace EnglishVocals_App.Models
                 {
                     await App.DatabaseTrue.AddToDBAsync(new Models.Words
                     {
+                        
                         GermanWords = txtGer,
                         EnglishWords = txtEng
-
+                        
                     });
                 }
-              
+                
+                IsInFalseDB(txtGer, txtEng);
+               
+            }
+        }
+        //Durchsuchen ob die Vokable in DatenbankFalse vorhanden ist und löschen.Diese methode nur wenn die Vokabel richtig beantwortet wurde einsetzen
+        private async void IsInFalseDB(string txtGer, string txtEng)
+        {
+            if (!string.IsNullOrWhiteSpace(txtGer) && !string.IsNullOrWhiteSpace(txtEng))
+            {
+                if (App.DatabaseFalse.GetAllItemsAsync().Result.Count > 0)
+                {
+                    bool hit = false;
+                    int id = 0;
+                    for (int i = 0; i < App.DatabaseFalse.GetDBCount().Result; i++)
+                    {
+                        if (App.DatabaseFalse.GetAllItemsAsync().Result[i].EnglishWords == txtEng)
+                        {
+                            hit = true;
+                            id = App.DatabaseFalse.GetAllItemsAsync().Result[i].Id;
+                            break;
+                        }
+
+                    }
+                    if (hit)
+                    {
+                        await App.DatabaseFalse.DeleteItemAsync(id);
+                    }
+                }
             }
         }
         private async void AddToFalseDB(string txtGer, string txtEng)
         {
             if (!string.IsNullOrWhiteSpace(txtGer) && !string.IsNullOrWhiteSpace(txtEng))
             {
-
+               
                 bool hit = false;
-                for (int i = 1; i <= App.DatabaseFalse.GetDBCount().Result; i++)
+                for (int i = 0; i < App.DatabaseFalse.GetDBCount().Result; i++)
                 {
-                    if (App.DatabaseTrue.GetItemAsync(i).Result.EnglishWords == txtEng)
+                    if (App.DatabaseFalse.GetAllItemsAsync().Result[i].EnglishWords == txtEng)
                     {
                         hit = true;
                         break;
@@ -357,7 +426,65 @@ namespace EnglishVocals_App.Models
 
                     });
                 }
+               
+                IsInTrueDB(txtGer, txtEng);
+               
+            }
+        }
+        //Durchsuchen ob die Vokable in DatenbankTrue vorhanden ist und löschen.Diese methode nur wenn die Vokabel falsch beantwortet wurde einsetzen
+        private async void IsInTrueDB(string txtGer,string txtEng)
+        {
+            if (!string.IsNullOrWhiteSpace(txtGer) && !string.IsNullOrWhiteSpace(txtEng))
+            {
+                if (App.DatabaseTrue.GetAllItemsAsync().Result.Count > 0)
+                {
+                    bool hit = false;
+                    int id = 0;
+                    for (int i = 0; i < App.DatabaseTrue.GetDBCount().Result; i++)
+                    {
+                        if (App.DatabaseTrue.GetAllItemsAsync().Result[i].EnglishWords == txtEng)
+                        {
+                            hit = true;
+                            id = App.DatabaseTrue.GetAllItemsAsync().Result[i].Id;
+                            break;
+                        }
 
+                    }
+                    if (hit)
+                    {
+                        await App.DatabaseTrue.DeleteItemAsync(id);
+                    }
+                }
+            }
+        }
+        private void ShowDBTrueItems()
+        {
+            Words words = new Words();
+            listShowTrueDB.Clear ();
+            for (int i = 0; i < App.DatabaseTrue.GetDBCount().Result; i++)
+            {
+                words.EnglishWords = App.DatabaseTrue.GetAllItemsAsync().Result[i].EnglishWords;
+                words.GermanWords = App.DatabaseTrue.GetAllItemsAsync().Result[i].GermanWords;
+                listShowTrueDB.Add(words);
+            }
+            foreach (var item in listShowTrueDB)
+            {
+                Debug.WriteLine(item.GermanWords);
+            }
+        }
+        private void ShowDBFalseItems()
+        {
+            Words words = new Words();
+            listShowFalseDB.Clear ();   
+            for (int i = 0; i < App.DatabaseFalse.GetDBCount().Result; i++)
+            {
+                words.EnglishWords = App.DatabaseFalse.GetAllItemsAsync().Result[i].EnglishWords;
+                words.GermanWords = App.DatabaseFalse.GetAllItemsAsync().Result[i].GermanWords;
+                listShowFalseDB.Add(words);
+            }
+            foreach (var item in listShowFalseDB)
+            {
+                Debug.WriteLine(item.GermanWords);
             }
         }
     }

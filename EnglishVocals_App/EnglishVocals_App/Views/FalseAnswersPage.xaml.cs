@@ -16,7 +16,7 @@ namespace EnglishVocals_App
         public FalseAnswersPage()
         {
             InitializeComponent();
-            BindingContext = new FalseAnswersViewModel(Navigation);
+            BindingContext = new FalseAnswersViewModel(Navigation,grid);
         }
     }
 }
