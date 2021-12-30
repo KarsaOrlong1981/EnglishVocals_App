@@ -17,7 +17,7 @@ namespace EnglishVocals_App
             {
                 if (dbTrue == null)
                 {
-                    dbTrue = new Database(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "TrueAnswers.db6"));
+                    dbTrue = new Database(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "TrueAnswers.db7"));
                 }
                 return dbTrue;
             }
@@ -28,7 +28,7 @@ namespace EnglishVocals_App
             {
                 if (dbFalse == null)
                 {
-                    dbFalse = new Database(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "FalseAnswers.db6"));
+                    dbFalse = new Database(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "FalseAnswers.db7"));
                 }
                 return dbFalse;
             }

@@ -1,0 +1,15 @@
+Have you got a single room for tonight?;Haben Sie für heute Nacht ein Einzelzimmer?
+I'd like to stay in a double room.;Ich möchte ein Doppelzimmer.
+Do all the rooms have air-conditioning?;Haben alle Zimmer Klimaanlage?
+Is breakfast included?;Ist Frühstück inklusive?
+When do you serve breakfast?;Wann ist Frühstückszeit?
+Could you give me a call at 7 tomorrow morning, please?;Könnten Sie mich bitte morgen früh um 7 wecken?
+I'd like to pay in cash by credit card or by traveller's check.;Ich möchte bar mit Kredikarte oder mit Reisescheck bezahlen.
+Hello, can I help you?;Guten Tag, kann ich Ihnen helfen?
+Would you like a room with a bath or a shower?;Möchten Sie ein Zimmer mit Bad oder Dusche?
+How long would you like to stay at our hotel?;Wie lange möchten Sie in unserem Hotel bleiben?
+How would you like to pay?;Wie möchten Sie zahlen?
+Your room is on the second floor on the right.;Ihr Zimmer ist im 2. Stock rechts.
+Sorry, we're fully booked for tonight.;Tut mir leid, das Hotel ist für heute Nacht belegt.
+Sorry, we are full up.;Tut mir leid, wir sind ausgebucht.
+Is there anything else I can do for you?;Kann ich sonst noch etwas für Sie tun?

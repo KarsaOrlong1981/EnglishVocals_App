@@ -19,6 +19,8 @@ Wer;who
 Warum;why
 Vorstellungen;Introductions
 Name;name
+Ich möchte gerne;I would like
+Ich möchte nicht;I don't want
 Wie heißen Sie;What is your name
 Ich heiße;My name is
 Ich bin;I am
@@ -36,7 +38,7 @@ Meine Freunde nennen mich;My friends call me …
 Kennen wir uns?;Have we met before?
 Dies ist Marvin;This is Marvin
 Wie war Ihr Wochenende?;How was your weekend?
-Begrüssung / Verabschiedung;Greeting / Farewell
+Begrüssung, Verabschiedung;Greeting, Farewell
 Hallo;Hello
 Guten Morgen;Good morning
 Guten Tag;Good afternoon
@@ -45,10 +47,10 @@ Gute Nacht;Good night
 Tschüss;Goodbye
 Auf Wiedersehen;See you
 Wie geht es Ihnen?;How are you?
-gut;well / good
+gut;well, good
 schlecht;bad
-Hey / Hallo;Hey/Hi
-Wie geht’s?;How’s it going? / How do you do?
+Hey, Hallo;Hey, Hi
+Wie geht’s?;How’s it going?, How do you do?
 Was geht?;What’s up?
 Schön Sie zu sehen;Good to see you
 Nett Sie kennenzulernen;Nice to meet you.
@@ -58,3 +60,404 @@ Wie steht’s?;How are things going?
 Reise;Travel
 Ich möchte gerne;I would like
 Tisch;table
+Wo sind die Toiletten?;	Where is the restroom?
+Wie spät ist es?;What time is it?
+Ich übernachte bei…;I am staying at…
+Ich besuche Familie Smith;I am visiting family Smith
+Ich bin hier für X Tage;I am here for X days
+Haben Sie eine Karte?;Do you have a map?
+Reisepass;passport
+Flughafen;airport
+Hafen;port
+Sicherheit;security
+Flugzeug;aeroplane
+Zug;train
+Schiff;ship
+Fahrrad;bike
+Motorrad;motorbike
+Bus;bus
+fliegen;to fly
+fahren;to drive
+segeln;to sail
+fahren;to ride
+Wegbeschreibungen;Directions
+links;left
+rechts;right
+hier;here
+dort;there
+zurück;back
+hoch;up
+runter;down
+geradeaus;straight on
+Ort;place
+Wo ist…?;Where is ..?
+Wie komme ich nach…?;How do I get to…?
+Ich suche … Straße.;I’m looking for … street.
+um die Ecke;around the corner
+weit;far
+in der Nähe von;near
+gegenüber von;across from
+Folgen Sie mir;follow me
+neben;next to
+vorbeigehen;go past
+zwischen;between
+Zeiten, Daten;Time, dates
+jetzt;now
+heute;today
+morgen;tomorrow
+gestern;yesterday
+Sekunde;second
+Minute;minute
+Stunde;hour
+Tag;day
+Woche;week
+Monat;month
+Jahr;year
+früh;early
+spät;late
+Montag;Monday
+Dienstag;Tuesday
+Mittwoch;Wednesday
+Donnerstag;Thursday
+Freitag;Friday
+Samstag;Saturday
+Sonntag;Sunday
+Frühling;spring
+Sommer;summer
+Herbst;fall (american) autumn (english)
+Winter;winter
+Januar;January
+Februar;February
+März;March
+April;April
+Mai;May
+Juni;June
+Juli;July
+August;August
+September;September
+Oktober;October
+November;November
+Dezember;December
+Uhrzeit;time
+Wie spät ist es?;What time is it?
+Jahrzehnt;decade
+Jahrhundert;century
+Orte;Locations
+Supermarkt;grocery store
+Krankenhaus;hospital
+Bank;bank
+Hotel;hotel
+Bar;bar
+Apotheke;pharmacy
+Strand;beach
+Restaurant;restaurant
+Flughafen;airport
+Bäckerei;bakery
+Bushaltestelle;bus station
+Kirche;church
+Kino;cinema
+Tankstelle;gas station
+Museum;museum
+Polizeistation;police station
+Schule;school
+Platz;square
+Supermarkt;supermarket
+Zoo;zoo
+Einkaufen;Shopping
+teuer;expensive
+billig;cheap
+kostenlos, frei;free
+Wie viel kostet das?;How much is that?
+Kassierer;cashier
+Trolley, Warenkorb;trolley, shopping cart
+Tasche;bag
+Garantie;warranty
+Rückgaberecht;refund policy
+Kundenkarte;loyalty card
+Mehrwertsteuer-Quittung;VAT receipt
+Rabatt;cash discount
+Gang;aisle
+Regal;shelf
+Umkleidekabine;changing room
+Lieferung;delivery
+Schlussverkauf;sale
+Entschuldigen Sie, arbeiten Sie hier?;Excuse me, do you work here?
+Im Restaurant;In the restaurant
+Einen Tisch für 5 Personen, bitte.;A table for 5, please.
+Ich würde gerne bestellen.;I would like to order.
+Kann ich bitte die Karte haben?;May I see the menu.
+Die Rechnung bitte.;Check, please. Can I have the bill.
+Frühstück;breakfast
+Mittagsessen;lunch
+Abendessen;dinner
+Besteck;cutlery
+Serviette;napkin
+Brunch;brunch
+Hauptgang;main course
+Dessert;dessert
+Trinkgeld;tip
+Beilage;side dish
+Getränke;beverages
+Alles was du essen kannst;all you can eat
+Im Hotel;In the hotel
+Zimmer;room
+Zimmerservice;room service
+Badezimmer;bathroom
+Bett;bed
+Schlafzimmer;bedroom
+Etage;floor
+Aufzug;elevator
+Rezeption;reception
+Handtuch;towel
+Nebenräume;adjoining rooms
+Gepäck;baggage
+Page;bellboy
+Kochnische;kitchenette
+Bettwäsche;linen
+Kammerdiener;valet
+Anzahlung;deposit
+Einchecken;check-in
+Auschecken;check-out
+gratis;complimentary
+Zahlen;Numbers
+1;one
+2;two
+3;three
+4;four
+5;five
+6;six
+7;seven
+8;eight
+9;nine
+10;ten
+11;eleven
+12;twelve
+13;thirteen
+14;fourteen
+15;fifteen
+16;sixteen
+17;seventeen
+18;eighteen
+19;nineteen
+20;twenty
+30;thirty
+40;fourty
+50;fifty
+60;sixty
+70;seventy
+80;eighty
+90;ninety
+100;hundred
+200;two hundred
+1000;thousand
+2000;two thousand
+Millionen;million
+erster;first
+zweiter;second
+dritter;third
+vierter;fourth
+fünfter;fifth
+sechster;sixth
+siebter;seventh
+Personalpronomen;Personal pronouns
+ich;I
+du;you
+er;he
+sie;she
+es;it
+wir;we
+ihr;you
+sie;they
+Wichtige Wörter;Important words
+Ding;thing
+sicher;sure
+der,die,das;the
+und;and
+oder;or
+weil;because
+Leben;life
+Regierung;government
+Kind;child
+Firma;company
+Gruppe;group
+Alter;age
+Mond;moon
+Sonne;sun
+Auto;car
+Buch;book
+Welt;world
+Familie;family
+Freund;friend
+Gesetz;law
+Mensch, Körper;Human, Body
+Mann;man
+Frau;woman
+Junge;boy
+Mädchen;girl
+Arm;arm
+Hand;hand
+Bein;leg
+Fuß;foot
+Auge;eye
+Kopf;head
+Gehirn;brain
+Nase;nose
+Ohr;ear
+Haar;hair
+Augenbraue;eyebrow
+Lippen;lips
+Finger;finger
+Skelett;skeleton
+Knochen;bones
+Haut;skin
+Wichtige Verben;Important verbs
+sein;to be
+bekommen;to get
+geben;to give
+leben;to live
+machen;to make
+gehen;to walk
+benutzen;to use
+essen;to eat
+denken;to think
+kommen;to come
+haben;to have
+tun;to do
+sagen;to say
+gehen;to go
+wissen;to know
+sehen;to see
+wollen;to want
+finden;to find
+erzählen;to tell
+fragen;to ask
+versuchen;to try
+anrufen;to call
+Wichtige Adjektive;Important adjectives
+schön;beautiful
+hässlich;ugly
+hoch;tall
+klein;small
+groß;big
+neu;new
+lang;long
+großartig;great
+alt;old
+jung;young
+anders;different
+wichtig;important
+schlecht;bad
+lustig;funny
+ernst;serious
+stark;strong
+einfach;easy
+schwer;difficult
+armer Mensch;poor Human
+reich;rich
+Kleidung;Clothing
+Hose;Trousers
+Schuhe;Shoes
+Hemd;Shirt
+Pullover; Sweater
+Jacke;Jacket
+Mütze;Cap
+Hut;Hat
+Handschuhe;Gloves
+Socken;Socks
+Strümpfe;Stockings
+Helm;Helmet
+Maske;Mask
+Bluse;blouse
+Gürtel;belt
+Krawatte;tie
+Mantel;coat
+Regenmantel;raincoat
+Rock;skirt
+Schal;scarf
+Schlafanzug;pyjama
+Strickjacke;cardigan
+Tshirt;t-shirt
+Unterhose;underpants
+Unterwäsche;underwear
+Sportarten;Sports
+100 Meter Lauf;run the 100 metres
+Abfahrtslauf;Downhill Skiing
+Angeln;Fishing
+Ausdauerlauf;Endourance course
+Bergsteigen;Mountaineering
+Billiard;Billiards
+Bob;Bobsleigh
+Bogenschießen;Archery
+Bowlen;Bowling
+Boxen;Boxing
+Dart;Darts
+Diskus;Discus
+Drachenfliegen;Hang-gliding
+Eishockey;Ice Hockey
+Eiskunstlauf;Figure Skating
+Eisschnellauf;Speed Skating
+Fallschirmspringen;Parachuting
+Fechten;Fencing
+Fußball;Soccer, Football
+Gewichtheben;Weight Lifting
+Hammerwurf;Hammer Throwing
+Hindernis-, Hürdenlauf;Hurdle Race
+Hochsprung;High jump
+Jagen;Hunting
+Joggen;Jogging
+Kajak;Kayak
+Kanu;Canoe
+Klettern;Climbing
+Kugelstoßen;Shot put
+Kurzstreckenlauf;Sprint
+Langstreckenlauf;long distance run
+Leichtathletik;Athletics 
+Motorsport;Motorsports
+Orientierungslauf;Orienteering
+Pferderennen;Horse Racing
+Radsport;Cycling
+Reiten;Riding, Equestrian
+Rennen;Running
+Rhythmische Sportgymnastik;Rhythmic Gymnastics
+Riesenslalom;Giant Slalom
+Ringen;Wrestling
+Rudern;Rowing
+Schach;Chess
+Schachfigur;Chessman
+Schießen;Shooting
+Schwimmen;Swimming, Aquatics
+Segelfliegen;Gliding
+Segeln;Sailing
+Seilspringen;Rope Skipping
+Skateboarden;Skateboarding
+Skaten;Skating
+Skilanglauf;Cross Country Skiing (XC Skiing)
+Skilaufen;Skiing
+Skispringen;Ski Jumping
+Snowboarden;Snowboarding
+Spazierengehen;Walking
+Speerwerfen;Javelin
+Stabhochsprung;Pole Vault
+Staffellauf;Relay Race
+Surfen;Surfing
+Synchronschwimmen;Synchronized Swimming
+Tanzen;Dancing
+Tauziehen;tug-of-war
+Tischtennis;Table Tennis
+Turnen;Gymnastics
+Wandern;Hiking
+Wasserball;Water Polo
+Wasserski;Waterski
+Wasserspringen;High Diving
+Weitsprung;Long jump
+Windsurfen;Windsurfing
+sonstiges;other
+Feuerwehr;Fire brigade
+Polizei;Police
+Krankenwagen;ambulance
+Krankenhaus;hospital
+Rathaus;town hall, city hall
+Schlauch;hosepipe
+Garten;garden
+Haus;house
+Ich stehe auf dem Schlauch; I don't get it, You've lost me now
