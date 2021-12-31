@@ -1,0 +1,11 @@
+You can't miss it.;Das kannst du nicht verfehlen. (Diese Wendung schließt meistens die Wegbeschreibung ab.)
+Excuse me, I'm looking for the town hall.;Entschuldigung, ich suche das Rathaus.
+Excuse me, could you tell me the way to the station, please?;Entschuldigung, könntest du mir bitte den Weg bis zum Bahnhof beschreiben?
+It's a 10-minute walk.;Es sind 10 Minuten zu Fuß.
+Is it far from the church to the station?;Ist es weit von der Kirche bis zum Bahnhof?
+It takes about 10 minutes by bus.;Mit dem Bus braucht man ungefähr 10 Minuten.
+What's the best way to the station?;Wie kommt man am besten zum Bahnhof?
+How far is it from the church to the station?;Wie weit ist es von der Kirche bis zum Bahnhof?
+Where is the next bus stop?;Wo hält der Bus als nächstes?
+Where is the nearest bus stop?;Wo ist die nächste Bushaltestelle?
+The church is within walking distance.;Zur Kirche kann man laufen

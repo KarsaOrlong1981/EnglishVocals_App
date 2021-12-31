@@ -12,29 +12,26 @@ namespace EnglishVocals_App.Models
     public class Vocals
     {
         List<string> listRookie;
-        List<string> listAdvanced;
+        List<string> listAdvancedChildren;
         List<string> listGerman;
         List<string> listEnglish;
-        List<Words> listShowTrueDB, listShowFalseDB;
         Random random;
         Button bt_German,bt_English;
         Grid grid;
         Button btn_ShowAnswer;
         SpeakText speak;
         string txtEnglish, txtGerman;
-        bool dbTrue, dbFalse,vocalsAdvanced;
+        bool dbTrue, dbFalse,advancedChildren;
         int switchGerEng;
         public Vocals(bool advanced, string topic)
         {
             listRookie = new List<string>();
-            listAdvanced = new List<string>();
-            listShowTrueDB = new List<Words>();
-            listShowFalseDB = new List<Words>();
+            listAdvancedChildren = new List<string>();
             speak = new SpeakText();
             random = new Random();
             dbFalse = false;
             dbTrue = false;
-            vocalsAdvanced = false;
+            advancedChildren = false;
             switch (advanced)
             {
                 case true: ReadAdvancedAsset(topic); break;
@@ -47,7 +44,7 @@ namespace EnglishVocals_App.Models
         {
             dbTrue = true;
             dbFalse = false;
-            vocalsAdvanced = false;
+            advancedChildren = false;
             if (App.DatabaseTrue.GetAllItemsAsync().Result.Count > 0)
             {
                 this.grid = grid;
@@ -69,7 +66,7 @@ namespace EnglishVocals_App.Models
         {
             dbTrue = false;
             dbFalse = true;
-            vocalsAdvanced = false;
+            advancedChildren = false;
             if (App.DatabaseFalse.GetAllItemsAsync().Result.Count > 0)
             {
                 this.grid = grid;
@@ -90,7 +87,7 @@ namespace EnglishVocals_App.Models
         {
             dbTrue = false;
             dbFalse = false;
-            vocalsAdvanced = false;
+            advancedChildren = false;
             this.grid = grid;
             this.switchGerEng = switchGerEng;
             listGerman = GetGermanVocals(false);
@@ -106,7 +103,7 @@ namespace EnglishVocals_App.Models
         {
             dbTrue = false;
             dbFalse = false;
-            vocalsAdvanced = true;
+            advancedChildren = true;
             this.grid = grid;
             this.switchGerEng = switchGerEng;
             listGerman = GetGermanVocals(true);
@@ -209,16 +206,16 @@ namespace EnglishVocals_App.Models
                 while (!(reader.EndOfStream))
                 {
                     string line = reader.ReadLine();
-                    listAdvanced.Add(line);
+                    listAdvancedChildren.Add(line);
                 }
             }
         }
         //value 1 = German, value 2 = English
-        private List<string> ExtractWordsFromList(int value, bool advanced)
+        private List<string> ExtractWordsFromList(int value, bool advancedChildren)
         {
             List<string> extractWords = new List<string>();
             extractWords.Clear();
-            switch (advanced)
+            switch (advancedChildren)
             {
                 //hier muss ich etwas tricksen da die Fortgeschrittenen Text Dateien andersherum geschrieben sind,
                 //quasi Englisch - Deutsch nicht Deutsch - Englisch
@@ -226,7 +223,7 @@ namespace EnglishVocals_App.Models
                     switch (value)
                     {
                         case 1:
-                            foreach (string word in listAdvanced)
+                            foreach (string word in listAdvancedChildren)
                             {
                                 string[] words = word.Split(';');
                                 //get the German Vocals
@@ -235,7 +232,7 @@ namespace EnglishVocals_App.Models
                             }
                             break;
                         case 2:
-                            foreach (string word in listAdvanced)
+                            foreach (string word in listAdvancedChildren)
                             {
                                 string[] words = word.Split(';');
                                 //get the English Vocals
@@ -274,19 +271,19 @@ namespace EnglishVocals_App.Models
         }
 
         //Die deutschen Wörter aus der Liste lesen
-        private List<string> GetGermanVocals(bool advanced)
+        private List<string> GetGermanVocals(bool advancedChildren)
         {
             List<string> vocalsList = new List<string>();
            
-            vocalsList = ExtractWordsFromList(1, advanced);
+            vocalsList = ExtractWordsFromList(1, advancedChildren);
             return vocalsList;
         }
         //Die Englischen Wörter aus der liste lesen
-        private List<string> GetEnglishVocals(bool advanced)
+        private List<string> GetEnglishVocals(bool avancedChildren)
         {
             List<string> vocalsList = new List<string>();
           
-            vocalsList = ExtractWordsFromList(2, advanced);
+            vocalsList = ExtractWordsFromList(2, avancedChildren);
             return vocalsList;
         }
        
@@ -404,7 +401,7 @@ namespace EnglishVocals_App.Models
         }
         private void GetVocalsFromListOrDB()
         {
-            if (dbFalse == false && dbTrue == false && vocalsAdvanced == false)
+            if (dbFalse == false && dbTrue == false && advancedChildren == false)
             {
                 GetRandomVocal(grid, switchGerEng);
             }
@@ -418,13 +415,13 @@ namespace EnglishVocals_App.Models
                 {
                     GetDBFalseVocals(grid, switchGerEng);
                 }
-                if (vocalsAdvanced == true)
+                if (advancedChildren == true)
                 {
                     GetRandomAdvancedVocal(grid, switchGerEng);
                 }
             }
         }
-        //App.Database1.GetQRcodeAsync().Result.Count == 0
+       
         private async void AddToTrueDB(string txtGer, string txtEng)
         {
             if (!string.IsNullOrWhiteSpace(txtGer) && !string.IsNullOrWhiteSpace(txtEng))

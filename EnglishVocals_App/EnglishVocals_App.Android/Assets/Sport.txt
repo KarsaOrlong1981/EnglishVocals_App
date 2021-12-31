@@ -1,0 +1,18 @@
+Andrew exercises every day.;André treibt täglich Sport.
+The match was cancelled because of rain.;Das Spiel wurden wegen Regen abgesagt.
+He didn't get to the next round.;Er hat die Qualifikation nicht geschafft.
+He likes his cycling.;Er mag seinen Radsport.
+He became fan of a famous sportsman.;Er wurde Fan eines bekannten Sportlers.	
+Have you ever played tennis?;Hast du schon mal Tennis gespielt?
+I'd like to go for a hike in the mountains.;Ich möchte eine Bergtour machen.
+Can I play, too?;Kann ich mitspielen?
+They played so well.;Sie haben so gut gespielt.
+She'd like to go skateboarding.;Sie möchte gern Skateboard fahren.
+She does a lot of sports.;Sie treibt viel Sport.
+Practice makes perfect.;Übung macht den Meister.
+When does the match begin/start?;Wann beginnt das Spiel?
+When is the next lesson?;Wann ist die nächste Trainingsstunde?
+What sport facilities are there here?;Welche Sportmöglichkeiten gibt es hier?
+What sports do you like?;Welchen Sport magst du?
+What's the score?;Wie steht es?
+Where can I go fishing?;Wo kann man hier angeln?

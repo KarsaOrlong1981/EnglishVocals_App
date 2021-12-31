@@ -1,0 +1,49 @@
+Hi, I'm Sue. I'll be your server for tonight.;Hi, ich bin Sue. Ich werde Sie/Euch heute Abend bedienen.
+What can I do for you?;Was kann ich für Sie tun?
+Can I help you?;Darf ich Ihnen helfen?
+Can I take your coat?;Darf ich Ihren Mantel nehmen?
+Have you booked a table?;Haben Sie bestellt?
+How many are you?;Wie viele sind Sie?
+Would you follow me, please?;Folgen Sie mir, bitte.
+Can I take your order, sir/madam?;Darf ich Ihre Bestellung aufnehmen?
+What would you like to start with?;Womit möchten Sie beginnen?
+What would you like to drink?;Was möchten Sie trinken?
+What would you like for dessert?;Was möchten Sie als Dessert?
+How would you like your steak? (rare, medium, well done);Wie möchten Sie Ihr Steak? (kurz angebraten, in der Mitte noch rosa, durchgebraten)
+Do you want a salad with it?;Möchten Sie einen Salat dazu?
+What kind of dressing?;Welche Art Dressing?
+Anything to drink?;Etwas zu trinken?
+Do you want a dessert?;Möchten Sie ein Dessert?
+The burgers are very good.;Die Burger sind sehr gut.
+Sorry, the hamburgers are off.;Tut mir leid, die Hamburger sind aus.
+Is everything all right?;Ist alles in Ordnung?
+Did you enjoy your meal?;Hat es Ihnen geschmeckt?
+Are you paying together?;Bezahlen Sie zusammen?
+May I show you to a table?;Darf ich Sie zum Tisch führen?
+If you wait, there'll be a table for you free in a minute.;Es wird gleich ein Tisch frei, wenn Sie warten wollen.
+Do you want vegetables with it?;Möchten Sie Gemüse dazu?
+Why don't you try the pizza?;Probieren Sie doch die Pizza.
+It'll take about 20 minutes.;Es dauert ca. 20 Minuten.
+A table for two, please.;Einen Tisch für zwei, bitte.
+May we sit at this table?;Dürfen wir uns an diesen Tisch setzen?
+The menu, please.;Die Speisekarte, bitte.
+What's on the menu?;Was gibt's zu Essen?
+Do you want fish?;Willst Du Fisch?
+What's Irish Stew like?;Was ist Irish Stew?
+We're not ready yet.;Wir sind noch nicht fertig. (zum Bestellen)
+The steak for me, please.;Das Steak ist für mich.
+Can you bring me the ketchup, please?;Können Sie mir bitte Ketchup bringen?
+A salad, please.;Einen Salat, bitte.
+I'll have the same.;Ich möchte das Gleiche.
+That's all, thank you.;Das ist alles, danke.
+Can I have the bill, please?;Kann ich bitte die Rechnung haben?
+This is on me.;Das geht auf mich.
+Here you are.;Bitte. (Wenn man bezahlt.)
+The rest is for you.;Der Rest ist für Sie.
+Have you got wine by the glass?;Haben Sie Wein?
+I'd prefer red wine.;Ich bevorzuge roten Wein.
+Please bring us another beer.;Bringen Sie uns bitte noch ein Bier.
+Could I have chips ( French Fries) instead of salad?;Könnte ich bitte Pommes anstelle von Salat haben?
+What can you recommend?;Was empfehlen Sie?
+Please bring me the bill with my coffee.;Bringen Sie mir bitte die Rechnung und einen Kaffee.
+I think you've made a mistake.;Ich glaube, Sie haben sich verrechnet.

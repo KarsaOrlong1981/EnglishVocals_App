@@ -1,0 +1,16 @@
+Who is this, please?;Wer ist dran?
+This is ...;Hier spricht ...
+... speaking.;Es spricht ...
+I'll phone back later.;Ich rufe später zurück.
+I've got the wrong number.;Ich habe die falsche Nummer gewählt.
+Please leave a message after the beep.;Bitte hinterlassen Sie eine Nachricht nach dem Piepton.
+Can I take a message?;Kann ich etwas ausrichten?
+Can I speak to ..., please?;Kann ich mit ... sprechen?
+Just a moment, please.;Einen Moment, bitte.
+I'll ring you at about ...;Ich rufe an wegen ...
+Thank you for ringing.;Danke für den Anruf.
+I must ring off now.;Ich muss jetzt auflegen.
+I can't get through. The line's busy.;Ich komme nicht durch. Es ist besetzt.
+There is no reply.;Es geht niemand ans Telefon.
+This is a bad connection.;Es ist eine schlechte Verbindung.
+Can I use my mobile?;Kann ich mein Handy benutzen?

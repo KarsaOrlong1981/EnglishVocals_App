@@ -1,0 +1,15 @@
+bike;Fahrrad
+boat;Boot
+bus;Bus
+car;Auto
+helicopter;Hubschrauber
+motorbike;Motorrad
+plane;Flugzeug
+scooter;Motorroller
+ship;Schiff
+taxi;Taxi
+train,Zug
+truck;Lastkraftwagen (LKW)
+Police car; Polizei Auto
+Fire Brigade car;Feuerwehr Auto
+Ambulance;Krankenwagen

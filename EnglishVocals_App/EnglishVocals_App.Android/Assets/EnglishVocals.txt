@@ -75,6 +75,19 @@ Zug;train
 Schiff;ship
 Fahrrad;bike
 Motorrad;motorbike
+Angestellter;employee
+Arbeiter;worker
+Arbeitgeber;employer
+Beruf (im Handwerk);trade
+Beruf (meistens mit Studium);profession
+Beruf allgemein;job
+Beschäftigung (auch in Freizeit);occupation
+eine feste Stelle haben;a regular job
+eine Firma leiten;to run a firm
+Er entschied sich für den Kellnerberuf.;He took a job as a waiter.
+Pendler;commuter
+seinen Lebensunterhalt verdienen;to earn one's living
+Womit verdienst du deinen Lebensunterhalt?;What do you do for a living?
 Bus;bus
 fliegen;to fly
 fahren;to drive
@@ -220,45 +233,6 @@ Einchecken;check-in
 Auschecken;check-out
 gratis;complimentary
 Zahlen;Numbers
-1;one
-2;two
-3;three
-4;four
-5;five
-6;six
-7;seven
-8;eight
-9;nine
-10;ten
-11;eleven
-12;twelve
-13;thirteen
-14;fourteen
-15;fifteen
-16;sixteen
-17;seventeen
-18;eighteen
-19;nineteen
-20;twenty
-30;thirty
-40;fourty
-50;fifty
-60;sixty
-70;seventy
-80;eighty
-90;ninety
-100;hundred
-200;two hundred
-1000;thousand
-2000;two thousand
-Millionen;million
-erster;first
-zweiter;second
-dritter;third
-vierter;fourth
-fünfter;fifth
-sechster;sixth
-siebter;seventh
 Personalpronomen;Personal pronouns
 ich;I
 du;you
@@ -461,3 +435,4 @@ Schlauch;hosepipe
 Garten;garden
 Haus;house
 Ich stehe auf dem Schlauch; I don't get it, You've lost me now
+redewendung;phrase

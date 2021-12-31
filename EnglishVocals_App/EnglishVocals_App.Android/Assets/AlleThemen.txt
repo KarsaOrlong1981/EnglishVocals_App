@@ -1,0 +1,207 @@
+My favourite hobby is playing snooker.;Mein liebstes Hobby ist Poolbillard-Spielen.
+I like listening to pop-music.;Ich mag es, Pop Musik zu hören.
+At weekends I sometimes go to a disco or to the cinema.;Am Wochenende gehe ich in die Disco oder ins Kino.
+I listen to bands like ...;Ich hören gern Bands, wie...
+I'm interested in punk.;Ich interessiere mich für Punk.
+While listening to hard-rock I can get everything off my chest.;Wenn ich hard-rock höre, dann kann ich total ausflippen.
+In summer I like to go swimming.;Im Sommer gehe ich gern Schwimmen.
+In winter I go skiing.;Im Winter gehe ich Skifahren.
+I like visiting friends and talking about this and that.;Ich mag es, Freunde zu besuchen und zu quatschen.
+My friend and I do lots of jigsaw puzzles.;Mein(e) Freund(in) und ich machen gern Puzzles zusammen.
+Playing football is fun.;Fussballspielen macht Spass.
+One of my hobbies is writing letters to my pen-friends.;Eines meiner Hobbies ist Briefeschreiben an meine Freunde.
+I do a paper route to earn a little money.;Ich trage Zeitungen aus, um etwas Geld zu verdienen.
+Sometimes I read so much that I forget the housework.;Manchmal lese ich so viel, dass ich die Hausarbeit vergesse.
+When the weather is bad, I read books or watch TV.;Wenn das Wetter schlecht ist, lese ich Bücher oder sehe fern.
+I enjoy working on the computer.;Ich mag es, am Computer zu arbeiten.
+I got a new computer for my birthday.;Ich habe einen neuen Computer zum Geburtstag bekommen.
+Once a week I do some handball practice.;Einmal in der Woche gehe ich zum Handballtraining.
+I go training every evening.;Ich trainiere jeden Abend.
+When it's not so hot, I go rollerskating.;Wenn es nicht zu heiß ist, gehe ich Rollschuhlaufen.
+I want to tell you something about my family.;Ich möchte dir etwas über meine Familie erzählen.
+I've got two older brothers.;Ich habe zwei ältere Brüder.
+My mother works as a clerk in an office.;Meine Mutter arbeitet als Angestellte in einem Büro.
+When we are on holidays I like walking in the mountains.;Wenn wir im Urlaub sind, gehe ich gern in den Bergen spazieren.
+On Saturdays I have to cook for the family.;Am Samstag muss ich für die Familie kochen.
+I collect my cousin from the kindergarten.;Ich hole meine(n) Cousin(e) vom Kindergarten ab.
+Now and then I do babysitting.;Ab und zu gehe ich Babysitten.
+Hi, I'm Sue. I'll be your server for tonight.;Hi, ich bin Sue. Ich werde Sie/Euch heute Abend bedienen.
+What can I do for you?;Was kann ich für Sie tun?
+Can I help you?;Darf ich Ihnen helfen?
+Can I take your coat?;Darf ich Ihren Mantel nehmen?
+Have you booked a table?;Haben Sie bestellt?
+How many are you?;Wie viele sind Sie?
+Would you follow me, please?;Folgen Sie mir, bitte.
+Can I take your order, sir/madam?;Darf ich Ihre Bestellung aufnehmen?
+What would you like to start with?;Womit möchten Sie beginnen?
+What would you like to drink?;Was möchten Sie trinken?
+What would you like for dessert?;Was möchten Sie als Dessert?
+How would you like your steak? (rare, medium, well done);Wie möchten Sie Ihr Steak? (kurz angebraten, in der Mitte noch rosa, durchgebraten)
+Do you want a salad with it?;Möchten Sie einen Salat dazu?
+What kind of dressing?;Welche Art Dressing?
+Anything to drink?;Etwas zu trinken?
+Do you want a dessert?;Möchten Sie ein Dessert?
+The burgers are very good.;Die Burger sind sehr gut.
+Sorry, the hamburgers are off.;Tut mir leid, die Hamburger sind aus.
+Is everything all right?;Ist alles in Ordnung?
+Did you enjoy your meal?;Hat es Ihnen geschmeckt?
+Are you paying together?;Bezahlen Sie zusammen?
+May I show you to a table?;Darf ich Sie zum Tisch führen?
+If you wait, there'll be a table for you free in a minute.;Es wird gleich ein Tisch frei, wenn Sie warten wollen.
+Do you want vegetables with it?;Möchten Sie Gemüse dazu?
+Why don't you try the pizza?;Probieren Sie doch die Pizza.
+It'll take about 20 minutes.;Es dauert ca. 20 Minuten.
+A table for two, please.;Einen Tisch für zwei, bitte.
+May we sit at this table?;Dürfen wir uns an diesen Tisch setzen?
+The menu, please.;Die Speisekarte, bitte.
+What's on the menu?;Was gibt's zu Essen?
+Do you want fish?;Willst Du Fisch?
+What's Irish Stew like?;Was ist Irish Stew?
+We're not ready yet.;Wir sind noch nicht fertig. (zum Bestellen)
+The steak for me, please.;Das Steak ist für mich.
+Can you bring me the ketchup, please?;Können Sie mir bitte Ketchup bringen?
+A salad, please.;Einen Salat, bitte.
+I'll have the same.;Ich möchte das Gleiche.
+That's all, thank you.;Das ist alles, danke.
+Can I have the bill, please?;Kann ich bitte die Rechnung haben?
+This is on me.;Das geht auf mich.
+Here you are.;Bitte. (Wenn man bezahlt.)
+The rest is for you.;Der Rest ist für Sie.
+Have you got wine by the glass?;Haben Sie Wein?
+I'd prefer red wine.;Ich bevorzuge roten Wein.
+Please bring us another beer.;Bringen Sie uns bitte noch ein Bier.
+Could I have chips ( French Fries) instead of salad?;Könnte ich bitte Pommes anstelle von Salat haben?
+What can you recommend?;Was empfehlen Sie?
+Please bring me the bill with my coffee.;Bringen Sie mir bitte die Rechnung und einen Kaffee.
+I think you've made a mistake.;Ich glaube, Sie haben sich verrechnet.
+Have you got a single room for tonight?;Haben Sie für heute Nacht ein Einzelzimmer?
+I'd like to stay in a double room.;Ich möchte ein Doppelzimmer.
+Do all the rooms have air-conditioning?;Haben alle Zimmer Klimaanlage?
+Is breakfast included?;Ist Frühstück inklusive?
+When do you serve breakfast?;Wann ist Frühstückszeit?
+Could you give me a call at 7 tomorrow morning, please?;Könnten Sie mich bitte morgen früh um 7 wecken?
+I'd like to pay in cash by credit card or by traveller's check.;Ich möchte bar mit Kredikarte oder mit Reisescheck bezahlen.
+Hello, can I help you?;Guten Tag, kann ich Ihnen helfen?
+Would you like a room with a bath or a shower?;Möchten Sie ein Zimmer mit Bad oder Dusche?
+How long would you like to stay at our hotel?;Wie lange möchten Sie in unserem Hotel bleiben?
+How would you like to pay?;Wie möchten Sie zahlen?
+Your room is on the second floor on the right.;Ihr Zimmer ist im 2. Stock rechts.
+Sorry, we're fully booked for tonight.;Tut mir leid, das Hotel ist für heute Nacht belegt.
+Sorry, we are full up.;Tut mir leid, wir sind ausgebucht.
+Is there anything else I can do for you?;Kann ich sonst noch etwas für Sie tun?
+Ich mag Fußball, aber ich mag Handball nicht.;I like football, but I don't like handball.
+Welche anderen Sportarten treibst du, außer Fußball?;What other sports do you practise besides football?
+Ich mag keinen Kaffee. – Ich auch nicht.;I don't like coffee. – Neither do I.
+Ich mag Fußball, besonders wenn meine Mannschaft gewinnt.;I like football, especially when my team wins.
+Ich war müde, deswegen ging ich ins Bett.;I was tired, so (that's why) I went to bed.
+Ich mag entweder Tee oder Milch.;I like either tea or milk.
+Natürlich mag ich Volleyball.;Of course I like volleyball.
+Weißt du, ob Peter in Glasgow wohnt?;Do you know if/whether Peter lives in Glasgow?
+Ich mag Fußball, obwohl ich oft unterwegs bin.;I like football although I'm often on the road.
+Tatsächlich glaube ich, dass meine Mannschaft gewinnt.;In fact, I think that my team will win.
+Sie verlieren das Spiel. Trotzdem sehen wir es uns an.;They're losing the match. Nevertheless we're watching it.
+Ich gehe zur Disco, um Freunde zu treffen.;I go to discos in order to meet friends.
+Ich mag Volleyball und Tennis.;I like volleyball and tennis.
+Vielleicht wirst du Fußball auch mögen.;Perhaps you'll like football, too.
+Ich mag Fußball, weil es ein interessantes Spiel ist.;I like football because it's interesting .
+Wenn man bedenkt, dass er Fußball erst zwei Jahre spielt, macht er es gut.;Considering he's played football for only two years, he does it well.
+Ich möchte gern zu deiner Feier kommen, wenn es nicht regnet.;I'll come to your party, unless it rains.
+Ich weiß nicht, wie man Squash spielt.;I don't know how to play Squash.
+Egal wie der Lehrer es erklärte, ich verstand kein Wort.;However the teacher explained it, I didn't understand a word of it.
+Zuerst möchte ich sagen, dass ...;First of all I'd like to say that, ...
+Ich mag Sport, zum Beispiel Fußball.;I like sports, for example football.
+Lovely day today, isn't it?;Ist heute nicht ein Schöner Tag? Eine Aussage zum Wetter, so beginnt man gern eine Unterhaltung in England.
+Excuse me, ...;Entschuldigung, ...
+What's the matter?;Was ist los?
+Good luck!;Viel Glück! Alles Gute!
+Congratulations.;Herzlichen Glückwunsch.
+Many happy returns of the day.;Herzlichen Glückwunsch zum Geburtstag.
+Happy birthday!;Alles Gute zum Geburtstag.
+Get well soon!;Gute Besserung!
+Could you do me a favour?;Kannst Du mir eine Gefallen tun?
+May I offer you a drink?;Kann ich Dir etwas zu trinken anbieten?
+Are you sure you wouldn't like to come in?;Willst Du wirklich nicht hereinkommen?
+Thank you very much!;Danke sehr.
+Thank you.;Danke.
+Many thanks.;Vielen Dank.
+Thanks a lot. - You're welcome.;Herzlichen Dank. - Gern geschehen (Bitte.)
+Would you excuse me, please?;Würdest Du mich bitte entschuldigen?
+It doesn't matter.;Macht nichts.
+I'd like you to meet Peter.;Ich möchte dich gern Peter vorstellen.
+May I introduce you to Peter?;Darf ich dich Peter vorstellen?
+May I introduce Peter to you?;Darf ich dir Peter vorstellen?
+Pardon?;Wie bitte?
+How are you?;Wie geht es dir?
+I'm fine, thanks.;Mir geht es gut.
+Not too bad.;Nicht schlecht.
+Say hello to Peter from me.;Grüß Peter von mir.
+Please give my love to Peter.;Bitte sag Peter liebe Grüße von mir.
+Good day.;Guten Tag! – wird nur verwendet, wenn man jemanden sehr energisch auffordet, den Raum zu verlassen (Rausschmiss)
+I'm sorry, I couldn't write earlier because I was ill.;Entschuldige, dass ich ich nicht eher geschrieben habe, aber ich war krank.
+Thanks for the letter and the wonderful photos of your hometown.;Danke für den Brief und die tollen Fotos von deiner Heimatstadt.
+It was interesting to hear about school life in Britain.;Es war interessant über das Schulleben in Großbritannien etwas zu hören.
+I attend the Highschool.;Ich besuche die Hochschule.
+It's a Secondary Modern School.;Es ist eine Oberschule.
+How much homework do you get every day?;Wieviele Hausaufgaben bekommt Ihr jeden Tag auf?
+In your letter you asked me to tell you something about schools in Saxony.;In deinem Brief hast du mich gebeten, etwas über Schulen in Sachsen zu erzählen.
+There are 15 boys and 12 girls in my class.;Wir sind 15 Jungs und 12 Mädchen in meiner Klasse.
+My friends and I don't get very good marks.;Meine Freundin und ich bekommen nicht sehr gute Noten.
+We like jokes better than school.;Wir mögen Witze lieber als Schule.
+I studied for the English test all evening.;Ich habe den ganzen Abend für die Englischarbeit gelernt.
+How are you and how are you enjoying your job?;Wie geht es dir und wie gefällt dir dein Beruf?
+Tell me about your working hours, your pay and your holidays.;Erzähl mir über deine Arbeitszeit, deinen Lohn und deine Ferien.
+I'm going to start an apprenticeship as a mechanic on August 1st.;Ich werde am 1. August eine Lehrstelle als Automechaniker beginnen.
+It's very difficult to get an interesting job here.;Es ist sehr schwierig, einen interessanten Beruf hier zu bekommen.
+In September I have to start work.;Im September muss ich zu arbeiten anfangen.
+I have made up my mind to become a nurse.;Ich habe mir überlegt, Krankenschwester zu werden.
+I can write good stories when I feel like it.;Ich kann gute Geschichten schreiben, wenn ich gut drauf bin.
+I don't like school very much.;Ich mag Schule nicht besonders.
+I'm planning to visit Wales next year.;Ich habe vor, Wales nächstes Jahr zu besuchen.
+Now I have to finish this letter.;Jetzt muss ich mit dem Brief Schluss machen.
+The sun is shining and therefore we want to go swimming.;Die Sonne scheint und deswegen wollen wir baden gehen.
+I'm looking forward to getting your letter.;Ich freue mich auf einen Brief von dir.
+Andrew exercises every day.;André treibt täglich Sport.
+The match was cancelled because of rain.;Das Spiel wurden wegen Regen abgesagt.
+He didn't get to the next round.;Er hat die Qualifikation nicht geschafft.
+He likes his cycling.;Er mag seinen Radsport.
+He became fan of a famous sportsman.;Er wurde Fan eines bekannten Sportlers.	
+Have you ever played tennis?;Hast du schon mal Tennis gespielt?
+I'd like to go for a hike in the mountains.;Ich möchte eine Bergtour machen.
+Can I play, too?;Kann ich mitspielen?
+They played so well.;Sie haben so gut gespielt.
+She'd like to go skateboarding.;Sie möchte gern Skateboard fahren.
+She does a lot of sports.;Sie treibt viel Sport.
+Practice makes perfect.;Übung macht den Meister.
+When does the match begin/start?;Wann beginnt das Spiel?
+When is the next lesson?;Wann ist die nächste Trainingsstunde?
+What sport facilities are there here?;Welche Sportmöglichkeiten gibt es hier?
+What sports do you like?;Welchen Sport magst du?
+What's the score?;Wie steht es?
+Where can I go fishing?;Wo kann man hier angeln?
+Who is this, please?;Wer ist dran?
+This is ...;Hier spricht ...
+... speaking.;Es spricht ...
+I'll phone back later.;Ich rufe später zurück.
+I've got the wrong number.;Ich habe die falsche Nummer gewählt.
+Please leave a message after the beep.;Bitte hinterlassen Sie eine Nachricht nach dem Piepton.
+Can I take a message?;Kann ich etwas ausrichten?
+Can I speak to ..., please?;Kann ich mit ... sprechen?
+Just a moment, please.;Einen Moment, bitte.
+I'll ring you at about ...;Ich rufe an wegen ...
+Thank you for ringing.;Danke für den Anruf.
+I must ring off now.;Ich muss jetzt auflegen.
+I can't get through. The line's busy.;Ich komme nicht durch. Es ist besetzt.
+There is no reply.;Es geht niemand ans Telefon.
+This is a bad connection.;Es ist eine schlechte Verbindung.
+Can I use my mobile?;Kann ich mein Handy benutzen?
+You can't miss it.;Das kannst du nicht verfehlen. (Diese Wendung schließt meistens die Wegbeschreibung ab.)
+Excuse me, I'm looking for the town hall.;Entschuldigung, ich suche das Rathaus.
+Excuse me, could you tell me the way to the station, please?;Entschuldigung, könntest du mir bitte den Weg bis zum Bahnhof beschreiben?
+It's a 10-minute walk.;Es sind 10 Minuten zu Fuß.
+Is it far from the church to the station?;Ist es weit von der Kirche bis zum Bahnhof?
+It takes about 10 minutes by bus.;Mit dem Bus braucht man ungefähr 10 Minuten.
+What's the best way to the station?;Wie kommt man am besten zum Bahnhof?
+How far is it from the church to the station?;Wie weit ist es von der Kirche bis zum Bahnhof?
+Where is the next bus stop?;Wo hält der Bus als nächstes?
+Where is the nearest bus stop?;Wo ist die nächste Bushaltestelle?
+The church is within walking distance.;Zur Kirche kann man laufen

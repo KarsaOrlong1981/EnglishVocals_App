@@ -12,9 +12,32 @@
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
-
                 <Button Grid.Row="0" 
+                            
+                            ContentLayout="top,0"
+                            FontSize="25"
+                            Text="Vokabeln für Kinder" 
+                            TextColor="White"
+                            HorizontalOptions="FillAndExpand" 
+                            VerticalOptions="FillAndExpand"
+                            BackgroundColor="Black" 
+                            BorderColor="SteelBlue"
+                            BorderWidth="5"
+                            CornerRadius="20"
+                            Margin="20"
+                            ImageSource="kinder.png"
+                            IsVisible="{Binding IsVisBtn}"
+                            Command="{Binding BTN_Children}"/>
+                <Button Grid.Row="1" 
                             x:Name="btn_learnVocals" 
                             ContentLayout="top,0"
                             FontSize="25"
@@ -30,7 +53,7 @@
                             ImageSource="teaching48"
                             IsVisible="{Binding IsVisBtn}"
                             Command="{Binding BTN_LearnEnglish}"/>
-                <Button Grid.Row="1" 
+                <Button Grid.Row="2" 
                
                             ContentLayout="top,0"
                             FontSize="25"
@@ -46,7 +69,7 @@
                             ImageSource="teaching48"
                             IsVisible="{Binding IsVisBtn}"
                             Command="{Binding BTN_LearnAdvanced}"/>
-                <Button Grid.Row="2" 
+                <Button Grid.Row="3" 
                
                             ContentLayout="top,0"
                             FontSize="25"
@@ -62,7 +85,7 @@
                             ImageSource="haken"
                             IsVisible="{Binding IsVisBtn}"
                             Command="{Binding BTN_TrueAnswers}"/>
-                <Button Grid.Row="3" 
+                <Button Grid.Row="4" 
                
                             ContentLayout="top,0"
                             FontSize="25"
