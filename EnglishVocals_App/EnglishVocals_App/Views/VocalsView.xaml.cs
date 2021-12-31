@@ -13,10 +13,10 @@ namespace EnglishVocals_App.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class VocalsView : ContentPage
     {
-        public VocalsView(int switchGerEng)
+        public VocalsView(int switchGerEng, bool advanced, string topic)
         {
             InitializeComponent();
-            BindingContext = new VocalsViewModel(Navigation, grid, switchGerEng, this);
+            BindingContext = new VocalsViewModel(Navigation, grid, switchGerEng, this, advanced, topic);
         }
     }
 }

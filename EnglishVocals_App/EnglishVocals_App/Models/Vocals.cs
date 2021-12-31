@@ -11,7 +11,8 @@ namespace EnglishVocals_App.Models
   
     public class Vocals
     {
-        List<string> list;
+        List<string> listRookie;
+        List<string> listAdvanced;
         List<string> listGerman;
         List<string> listEnglish;
         List<Words> listShowTrueDB, listShowFalseDB;
@@ -21,24 +22,32 @@ namespace EnglishVocals_App.Models
         Button btn_ShowAnswer;
         SpeakText speak;
         string txtEnglish, txtGerman;
-        bool dbTrue, dbFalse;
+        bool dbTrue, dbFalse,vocalsAdvanced;
         int switchGerEng;
-        public Vocals()
+        public Vocals(bool advanced, string topic)
         {
-            list = new List<string>();
+            listRookie = new List<string>();
+            listAdvanced = new List<string>();
             listShowTrueDB = new List<Words>();
             listShowFalseDB = new List<Words>();
             speak = new SpeakText();
             random = new Random();
             dbFalse = false;
             dbTrue = false;
-            ReadAsset();
+            vocalsAdvanced = false;
+            switch (advanced)
+            {
+                case true: ReadAdvancedAsset(topic); break;
+                case false: ReadAsset(); break;
+            }
+            
         }
         //Die Methoden
         public  void GetDBTrueVocals(Grid grid, int switchGerEng)
         {
             dbTrue = true;
             dbFalse = false;
+            vocalsAdvanced = false;
             if (App.DatabaseTrue.GetAllItemsAsync().Result.Count > 0)
             {
                 this.grid = grid;
@@ -60,6 +69,7 @@ namespace EnglishVocals_App.Models
         {
             dbTrue = false;
             dbFalse = true;
+            vocalsAdvanced = false;
             if (App.DatabaseFalse.GetAllItemsAsync().Result.Count > 0)
             {
                 this.grid = grid;
@@ -80,20 +90,39 @@ namespace EnglishVocals_App.Models
         {
             dbTrue = false;
             dbFalse = false;
+            vocalsAdvanced = false;
             this.grid = grid;
             this.switchGerEng = switchGerEng;
-            listGerman = GetGermanVocals();
-            listEnglish = GetEnglishVocals();
+            listGerman = GetGermanVocals(false);
+            listEnglish = GetEnglishVocals(false);
             int randomValue = random.Next(0, listGerman.Count);
             string vocalGerman = listGerman[randomValue];
             string vocalEnglish = listEnglish[randomValue];
             SetButtonsToGrid(vocalGerman , vocalEnglish);
           
         }
+        //Wird über einen Klick aktiviert aus dem optionen menü
+        public void GetRandomAdvancedVocal(Grid grid, int switchGerEng)
+        {
+            dbTrue = false;
+            dbFalse = false;
+            vocalsAdvanced = true;
+            this.grid = grid;
+            this.switchGerEng = switchGerEng;
+            listGerman = GetGermanVocals(true);
+            listEnglish = GetEnglishVocals(true);
+            int randomValue = random.Next(0, listGerman.Count);
+            string vocalGerman = listGerman[randomValue];
+            string vocalEnglish = listEnglish[randomValue];
+            SetButtonsToGrid(vocalGerman, vocalEnglish);
+
+        }
         private void SetButtonsToGrid(string vocalGerman, string vocalEnglish)
         {
             txtEnglish = vocalEnglish;
             txtGerman = vocalGerman;
+          
+           
             Button bt_German = new Button
             {
                 Text = txtGerman,
@@ -166,53 +195,98 @@ namespace EnglishVocals_App.Models
                 while (!(reader.EndOfStream))
                 {
                     string line = reader.ReadLine();
-                    list.Add(line);
+                    listRookie.Add(line);
+                }
+            }
+        }
+        private void ReadAdvancedAsset(string topic)
+        {
+
+            string filename = topic;
+            AssetManager assets = Android.App.Application.Context.Assets;
+            using (StreamReader reader = new StreamReader(assets.Open(filename)))
+            {
+                while (!(reader.EndOfStream))
+                {
+                    string line = reader.ReadLine();
+                    listAdvanced.Add(line);
                 }
             }
         }
         //value 1 = German, value 2 = English
-        private List<string> ExtractWordsFromList(int value)
+        private List<string> ExtractWordsFromList(int value, bool advanced)
         {
             List<string> extractWords = new List<string>();
             extractWords.Clear();
-            switch (value)
+            switch (advanced)
             {
-                case 1:
-                    foreach(string word in list)
+                //hier muss ich etwas tricksen da die Fortgeschrittenen Text Dateien andersherum geschrieben sind,
+                //quasi Englisch - Deutsch nicht Deutsch - Englisch
+                case true:
+                    switch (value)
                     {
-                        string[] words = word.Split(';');
-                        //get the German Vocals
-                        extractWords.Add(words[0]);
+                        case 1:
+                            foreach (string word in listAdvanced)
+                            {
+                                string[] words = word.Split(';');
+                                //get the German Vocals
+                                extractWords.Add(words[1]);
 
+                            }
+                            break;
+                        case 2:
+                            foreach (string word in listAdvanced)
+                            {
+                                string[] words = word.Split(';');
+                                //get the English Vocals
+                                extractWords.Add(words[0]);
+
+                            }
+                            break;
                     }
                     break;
-                case 2:
-                    foreach (string word in list)
+                    case false:
+                    switch (value)
                     {
-                        string[] words = word.Split(';');
-                        //get the English Vocals
-                        extractWords.Add(words[1]);
+                        case 1:
+                            foreach (string word in listRookie)
+                            {
+                                string[] words = word.Split(';');
+                                //get the German Vocals
+                                extractWords.Add(words[0]);
 
+                            }
+                            break;
+                        case 2:
+                            foreach (string word in listRookie)
+                            {
+                                string[] words = word.Split(';');
+                                //get the English Vocals
+                                extractWords.Add(words[1]);
+
+                            }
+                            break;
                     }
                     break;
             }
+           
             return extractWords;
         }
 
         //Die deutschen Wörter aus der Liste lesen
-        private List<string> GetGermanVocals()
+        private List<string> GetGermanVocals(bool advanced)
         {
             List<string> vocalsList = new List<string>();
            
-            vocalsList = ExtractWordsFromList(1);
+            vocalsList = ExtractWordsFromList(1, advanced);
             return vocalsList;
         }
         //Die Englischen Wörter aus der liste lesen
-        private List<string> GetEnglishVocals()
+        private List<string> GetEnglishVocals(bool advanced)
         {
             List<string> vocalsList = new List<string>();
           
-            vocalsList = ExtractWordsFromList(2);
+            vocalsList = ExtractWordsFromList(2, advanced);
             return vocalsList;
         }
        
@@ -330,7 +404,7 @@ namespace EnglishVocals_App.Models
         }
         private void GetVocalsFromListOrDB()
         {
-            if (dbFalse == false && dbTrue == false)
+            if (dbFalse == false && dbTrue == false && vocalsAdvanced == false)
             {
                 GetRandomVocal(grid, switchGerEng);
             }
@@ -343,6 +417,10 @@ namespace EnglishVocals_App.Models
                 if (dbFalse == true)
                 {
                     GetDBFalseVocals(grid, switchGerEng);
+                }
+                if (vocalsAdvanced == true)
+                {
+                    GetRandomAdvancedVocal(grid, switchGerEng);
                 }
             }
         }
@@ -460,35 +538,6 @@ namespace EnglishVocals_App.Models
                 }
             }
         }
-        private void ShowDBTrueItems()
-        {
-            Words words = new Words();
-            listShowTrueDB.Clear ();
-            for (int i = 0; i < App.DatabaseTrue.GetDBCount().Result; i++)
-            {
-                words.EnglishWords = App.DatabaseTrue.GetAllItemsAsync().Result[i].EnglishWords;
-                words.GermanWords = App.DatabaseTrue.GetAllItemsAsync().Result[i].GermanWords;
-                listShowTrueDB.Add(words);
-            }
-            foreach (var item in listShowTrueDB)
-            {
-                Debug.WriteLine(item.GermanWords);
-            }
-        }
-        private void ShowDBFalseItems()
-        {
-            Words words = new Words();
-            listShowFalseDB.Clear ();   
-            for (int i = 0; i < App.DatabaseFalse.GetDBCount().Result; i++)
-            {
-                words.EnglishWords = App.DatabaseFalse.GetAllItemsAsync().Result[i].EnglishWords;
-                words.GermanWords = App.DatabaseFalse.GetAllItemsAsync().Result[i].GermanWords;
-                listShowFalseDB.Add(words);
-            }
-            foreach (var item in listShowFalseDB)
-            {
-                Debug.WriteLine(item.GermanWords);
-            }
-        }
+      
     }
 }

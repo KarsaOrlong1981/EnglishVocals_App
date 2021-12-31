@@ -3,68 +3,83 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodels="clr-namespace:EnglishVocals_App.ViewModels" x:DataType="viewmodels:MainPageViewModel"
              x:Class="EnglishVocals_App.MainPage"
              Title="Hauptmenü">
-    
-        
-   
-    <Grid x:Name="grid" IsVisible="{Binding IsVisGrid}">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-       
-        <Button Grid.Row="0" 
-                x:Name="btn_learnVocals" 
-                ContentLayout="top,0"
-                FontSize="25"
-                Text="Vokabeln lernen" 
-                TextColor="White"
-                HorizontalOptions="FillAndExpand" 
-                VerticalOptions="FillAndExpand"
-                BackgroundColor="Black" 
-                BorderColor="SteelBlue"
-                BorderWidth="5"
-                CornerRadius="20"
-                Margin="20"
-                ImageSource="teaching48"
-                IsVisible="{Binding IsVisBtn}"
-                Command="{Binding BTN_LearnEnglish}"/>
-        <Button Grid.Row="1" 
+
+    <Grid>
+        <ScrollView VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <Grid x:Name="grid" IsVisible="{Binding IsVisGrid}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Button Grid.Row="0" 
+                            x:Name="btn_learnVocals" 
+                            ContentLayout="top,0"
+                            FontSize="25"
+                            Text="Vokabeln Grundlagen" 
+                            TextColor="White"
+                            HorizontalOptions="FillAndExpand" 
+                            VerticalOptions="FillAndExpand"
+                            BackgroundColor="Black" 
+                            BorderColor="SteelBlue"
+                            BorderWidth="5"
+                            CornerRadius="20"
+                            Margin="20"
+                            ImageSource="teaching48"
+                            IsVisible="{Binding IsVisBtn}"
+                            Command="{Binding BTN_LearnEnglish}"/>
+                <Button Grid.Row="1" 
                
-                ContentLayout="top,0"
-                FontSize="25"
-                Text="Richtige Vokabeln" 
-                TextColor="White"
-                HorizontalOptions="FillAndExpand" 
-                VerticalOptions="FillAndExpand"
-                BackgroundColor="Black" 
-                BorderColor="SteelBlue"
-                BorderWidth="5"
-                CornerRadius="20"
-                Margin="20"
-                ImageSource="haken"
-                IsVisible="{Binding IsVisBtn}"
-                Command="{Binding BTN_TrueAnswers}"
+                            ContentLayout="top,0"
+                            FontSize="25"
+                            Text="Vokabeln Fortgeschritten" 
+                            TextColor="White"
+                            HorizontalOptions="FillAndExpand" 
+                            VerticalOptions="FillAndExpand"
+                            BackgroundColor="Black" 
+                            BorderColor="SteelBlue"
+                            BorderWidth="5"
+                            CornerRadius="20"
+                            Margin="20"
+                            ImageSource="teaching48"
+                            IsVisible="{Binding IsVisBtn}"
+                            Command="{Binding BTN_LearnAdvanced}"/>
+                <Button Grid.Row="2" 
                
-                />
-        <Button Grid.Row="2" 
+                            ContentLayout="top,0"
+                            FontSize="25"
+                            Text="Richtige Vokabeln" 
+                            TextColor="White"
+                            HorizontalOptions="FillAndExpand" 
+                            VerticalOptions="FillAndExpand"
+                            BackgroundColor="Black" 
+                            BorderColor="SteelBlue"
+                            BorderWidth="5"
+                            CornerRadius="20"
+                            Margin="20"
+                            ImageSource="haken"
+                            IsVisible="{Binding IsVisBtn}"
+                            Command="{Binding BTN_TrueAnswers}"/>
+                <Button Grid.Row="3" 
                
-                ContentLayout="top,0"
-                FontSize="25"
-                Text="Falsche Vokabeln" 
-                TextColor="White"
-                HorizontalOptions="FillAndExpand" 
-                VerticalOptions="FillAndExpand"
-                BackgroundColor="Black" 
-                BorderColor="SteelBlue"
-                BorderWidth="5"
-                CornerRadius="20"
-                Margin="20"
-                ImageSource="cross"
-                IsVisible="{Binding IsVisBtn}"
-                 Command="{Binding BTN_FalseAnswers}"
-                />
+                            ContentLayout="top,0"
+                            FontSize="25"
+                            Text="Falsche Vokabeln" 
+                            TextColor="White"
+                            HorizontalOptions="FillAndExpand" 
+                            VerticalOptions="FillAndExpand"
+                            BackgroundColor="Black" 
+                            BorderColor="SteelBlue"
+                            BorderWidth="5"
+                            CornerRadius="20"
+                            Margin="20"
+                            ImageSource="cross"
+                            IsVisible="{Binding IsVisBtn}"
+                             Command="{Binding BTN_FalseAnswers}"
+                            />
+            </Grid>
+        </ScrollView>
     </Grid>
-    
 </ContentPage>

@@ -27,7 +27,7 @@ namespace EnglishVocals_App.ViewModels
             this.Navigation = navigation;
             this.grid = grid;
             IsVisBtn = true;
-            vocals = new Vocals();
+            vocals = new Vocals(false, string.Empty);
 
             BTN_GermanEnglish = new Command(() => GermanEnglish());
             BTN_EnglishGerman = new Command(() => EnglishGerman());
